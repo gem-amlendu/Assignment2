@@ -1,0 +1,38 @@
+﻿
+@{
+    ViewBag.Title = "Login";
+    Layout = "~/Views/_LayoutPage1.cshtml";
+}
+
+<!--start-login-form-->
+<div class="login-form">
+    <h1>Member login</h1>
+    <form method="post">
+        <span>
+            <input type="text" class="user" value="Name" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Username';}">
+        </span>
+        <span>
+            <input type="password" class="lock" value="Password" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Password';}">
+        </span>
+        <div class="submit">
+            <input type="submit" onclick="myFunction()" value="LOGIN" />
+        </div>
+
+        <div class="Remember-me">
+            <span class="col_checkbox">
+                <input id="10" class="css-checkbox10" type="checkbox">
+                <a href="#">Remember me</a>
+            </span>
+            <span class="forget-pass">
+                <a href="/Account/ForgotPassword">Forgot password?</a>
+            </span>
+            <div class="clear"> </div>
+        </div>
+
+
+    </form>
+    <div class="copy-right">
+        <p>If not registered <a href="/Account/Register">Register!!!</a></p>
+    </div>
+</div>
+<!--//End-login-form-->

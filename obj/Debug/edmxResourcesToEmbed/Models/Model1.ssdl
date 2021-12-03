@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="loginRegisterMVCModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'loginRegisterMVC.dbo.registeredUser2' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="registeredUser2">
+    <Key>
+      <PropertyRef Name="username" />
+      <PropertyRef Name="password" />
+      <PropertyRef Name="birthday" />
+      <PropertyRef Name="gender" />
+      <PropertyRef Name="email" />
+      <PropertyRef Name="phone" />
+    </Key>
+    <Property Name="username" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="password" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="birthday" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="gender" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="email" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="phone" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="loginRegisterMVCModelStoreContainer">
+    <EntitySet Name="registeredUser2" EntityType="Self.registeredUser2" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+[registeredUser2].[username] AS [username], 
+[registeredUser2].[password] AS [password], 
+[registeredUser2].[birthday] AS [birthday], 
+[registeredUser2].[gender] AS [gender], 
+[registeredUser2].[email] AS [email], 
+[registeredUser2].[phone] AS [phone]
+FROM [dbo].[registeredUser2] AS [registeredUser2]</DefiningQuery>
+    </EntitySet>
+  </EntityContainer>
+</Schema>
